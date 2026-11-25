@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Aid | Health Profile</title>
+
+        <link rel="stylesheet" type="text/css" href="style.css">
+    </head>
+    <body>
+        <!-- Website name & navigation -->
+        <header>
+            <div class="brand">
+                <h1>Aid <span>- Instant Support</span></h1>
+                <p lang="ar" dir="rtl">عون للمساعدة الفورية</p>
+            </div>
+
+            <nav aria-label="Main navigation">
+                <a href="index.html">Home</a>
+                <a href="profile.html" aria-current="page">Health Profile</a>
+                <a href="request.html">Request Help</a>
+                <a href="dashboard.html">Dashboard</a>
+                <a href="recovery.html">Recovery</a>
+            </nav>
+        </header>
+
+        <main>
+            <h2>Health Profile · الملف الصحي</h2>
+            <p>
+                Enter your health information and medical history ·
+                ادخل معلوماتك الصحية وتاريخك الطبي
+            </p>
+
+            <form>
+                <h3>Personal &amp; Medical Information</h3>
+                <div class="Grid">
+                    <div class="Field">
+                        <label for="Full-name">Full Name - الاسم كامل</label>
+                        <input type="text" id="Full-name" name="fullName" placeholder="Enter Full Name">
+                    </div>
+
+                    <div class="Field">
+                        <label for="Contact-name">Emergency Name - اسم جهة الاتصال للطوارئ</label>
+                        <input type="text" id="Contact-name" name="contactName" placeholder="Enter Contact Name">
+                    </div>
+                </div>
+
+                <div class="Grid">
+                    <div class="Field">
+                        <label for="Phone">Phone Number - رقم الهاتف</label>
+                        <input type="tel" id="Phone" name="phone" placeholder="Enter Phone Number">
+                    </div>
+
+                    <div class="Field">
+                        <label for="Contact-phone">Emergency Contact Phone - رقم هاتف جهة الاتصال</label>
+                        <input type="tel" id="Contact-Phone" name="contactPhone" placeholder="Enter Contact Number">
+                    </div>
+                </div>
+
+                <div class="Grid">
+                    <div class="Field">
+                        <label for="Blood-type">Blood Type - فصيلة الدم</label>
+                        <select id="Blood-Type" name="bloodType">
+                            <option value="">Select if known</option>
+                            <option value="a-positive">A+</option>
+                            <option value="a-negative">A-</option>
+                            <option value="b-positive">B+</option>
+                            <option value="b-negative">B-</option>
+                            <option value="ab-positive">AB+</option>
+                            <option value="ab-negative">AB-</option>
+                            <option value="o-positive">O+</option>
+                            <option value="o-negative">O-</option>
+                            <option value="unknown">Unknown</option>
+                        </select>
+                    </div>
+
+                    <div class="Field">
+                        <label for="Conditions">
+                            Chronic Conditions - الأمراض المزمنة
+                        </label>
+                        <textarea
+                            id="Conditions" 
+                            name="conditions" 
+                            rows="4" 
+                            placeholder="List relevant conditions, if any">
+                        </textarea>
+                    </div>
+                </div>
+
+                <div class="Grid">
+                    <div class="Field">
+                        <label for="Allergies">Known Allergies - الحساسية المعروفة</label>
+                        <textarea
+                            id="Allergies"
+                            name="allergies"
+                            row="4"
+                            placeholder="List allergies, or write “None known”">
+                        </textarea>
+                    </div>
+
+                    <div class="Field">
+                        <label for="Medications">Current Medications - الأدوية الحالية</label>
+                        <textarea
+                            id="Medications"
+                            name="medications"
+                            row="4"
+                            placeholder="List current medications">
+                        </textarea>
+                    </div>
+                </div>
+
+                <button type="button">Save Profile - حفظ الملف</button>
+            </form>
+        </main>
+    </body>
+</html>
