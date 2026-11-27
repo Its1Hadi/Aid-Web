@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Aid | Health Profile</title>
+
+        <link rel="stylesheet" type="text/css" href="style.css">
+    </head>
+    <body>
+        <!-- Website name & navigation -->
+        <header>
+            <div class="brand">
+                <h1>Aid <span>- Instant Support</span></h1>
+                <p lang="ar" dir="rtl">عون للمساعدة الفورية</p>
+            </div>
+
+            <nav aria-label="Main navigation">
+                <a href="index.html">Home</a>
+                <a href="profile.html">Health Profile</a>
+                <a href="request.html" aria-current="page">Request Help</a>
+                <a href="dashboard.html">Dashboard</a>
+                <a href="recovery.html">Recovery</a>
+            </nav>
+        </header>
+
+        <main>
+            <h2>Request Emergency Help · <span lang="ar">طلب المساعدة الطارئة</span></h2>
+            <p class="subtitle">Select your urgency status and submit a help request · <span lang="ar">اختر حالة الطوارئ</span></p>
+
+            <ul class="Chips">
+                <li><button type="button">Difficulty Breathing <span lang="ar">صعوبة التنفس</span></button></li>
+                <li><button type="button">Severe Pain <span lang="ar">ألم شديد</span></button></li>
+                <li><button type="button">Bleeding <span lang="ar">نزيف</span></button></li>
+                <li><button type="button">Allergic Reaction <span lang="ar">حساسية شديدة</span></button></li>
+                <li><button type="button">Fever <span lang="ar">حرارة عالية</span></button></li>
+                <li><button type="button">Injury <span lang="ar">إصابة</span></button></li>
+            </ul>
+
+            <div class="Statuses">
+                <div class="Status Critical">
+                    <span class="Icon" aria-hidden="true">✱</span>
+                    <h3>Critical Emergency · <span lang="ar">حالة حرجة</span></h3>
+                    <p class="description">Severe Symptoms · <span lang="ar">أعراض خطيرة</span></p>
+                    <a href="#Help" data-status="Critical Emergency">Select</a>
+                </div>
+
+                <div class="Status Urgent">
+                    <span class="Icon" aria-hidden="true">⚠️</span>
+                    <h3>Urgent Condition · <span lang="ar">حالة عاجلة</span></h3>
+                    <p class="description">Moderate Symptoms · <span lang="ar">أعراض متوسطة</span></p>
+                    <a href="#Help" data-status="Urgent Condition">Select</a>
+                </div>
+
+                <div class="Status Stable">
+                    <span class="Icon" aria-hidden="true">✚</span>
+                    <h3>Stable Condition · <span lang="ar">حالة مستقرة</span></h3>
+                    <p class="description">Minor Symptoms · <span lang="ar">أعراض خفيفة</span></p>
+                    <a href="#Help" data-status="Stable Condition">Select</a>
+                </div>
+            </div>
+
+            <!-- Help request form -->
+            <form id="Help" novalidate>
+                <h3>Help Request Details · <span lang="ar">تفاصيل المساعدة</span></h3>
+
+                <input type="hidden" id="status" name="status" value="">
+
+                <div class="Grid">
+                    <div class="Field">
+                        <label for="fullname">
+                            <span>Full Name</span> <span lang="ar">الاسم الكامل</span>
+                        </label>
+                        <input type="text" id="fullname" name="fullname" placeholder="Full Name" required>
+                    </div>
+
+                    <div class="Field">
+                        <label for="phone">
+                            Phone Number<span lang="ar">رقم الهاتف</span>
+                        </label>
+                        <input type="tel" id="phone" name="phone" placeholder="05X XXX XXXX" required>
+                    </div>
+
+                    <div class="Field">
+                        <label for="location">
+                            Current Location
+                            <span lang="ar">الموقع الحالي</span>
+                        </label>
+                        <input type="text" id="location" name="location" placeholder="Current Location" required>
+                    </div>
+
+                    <div class="Field">
+                        <label for="contact">
+                            Emergency Contact
+                            <span lang="ar">جهة اتصال طوارئ</span>
+                        </label>
+                        <input type="tel" id="contact" name="contact" placeholder="Emergency Contact" required>
+                    </div>
+
+                    <div class="Field Wide">
+                        <label for="details">
+                            Symptoms &amp; Urgent Details
+                            <span lang="ar">الأعراض والتفاصيل العاجلة</span>
+                        </label>
+                        <textarea id="details" name="details" placeholder="Describe what is happening · صف ما يحدث بالتفصيل" required></textarea>
+                    </div>
+                </div>
+
+                <button type="submit">Submit Request · <span lang="ar">إرسال الطلب</span></button>
+
+                <p class="feedback" id="feedback" role="status" aria-live="polite"></p>
+
+                <div class="Request">
+                    <p class="Location" id="locating">
+                        Automatically locating your position...<br>
+                        <span lang="ar">جاري تحديد الموقع تلقائياً</span>
+                    </p>
+                    <p>Red Crescent is notified immediately <br> سيتم إبلاغ الهلال الأحمر فوراً
+                    </p>
+                </div>
+            </form>
+        </main>
+
+        <footer>
+            <p>&copy; 2026 Aid - Instant Support</p>
+        </footer>
+    </body>
+</html>
