@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Aid | Recovery</title>
+
+        <link rel="stylesheet" type="text/css" href="style.css">
+    </head>
+    <body>
+        <!-- Website name & navigation -->
+        <header>
+            <div class="brand">
+                <span class="Logo" aria-hidden="true"></span>
+                <h1>Aid <span>- Instant Support</span></h1>
+                <p lang="ar" dir="rtl">عون للمساعدة الفورية</p>
+            </div>
+
+            <nav aria-label="Main navigation">
+                <a href="index.html">Home</a>
+                <a href="profile.html">Health Profile</a>
+                <a href="request.html">Request Help</a>
+                <a href="Emergency Info.html">Emergency Info</a>
+                <a href="recovery.html" aria-current="page">Recovery</a>
+            </nav>
+        </header>
+
+        <main>
+            <h2>Recovery Tracker · <span lang="ar">متتبع التعافي</span></h2>
+            <p class="subtitle">Record your daily symptoms, monitor pain levels, and track your overall recovery progress.</p>
+
+            <div class="Recovery">
+                <!-- Progress ring (JS sets the number) -->
+                <div class="Panel">
+                    <h3>Your Recovery Progress · <span lang="ar">تقدم تعافيك</span></h3>
+                    <div class="Progress">
+                        <div class="Ring" id="ring">
+                            <span><strong id="ringText">65%</strong>Recovered</span>
+                        </div>
+                        <div>
+                            <p>You are making steady progress! Keep logging your daily symptoms below.</p>
+                            <p lang="ar" dir="rtl">أنت تحقق تقدماً مستمراً! استمر في تسجيل أعراضك اليومية.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Log form -->
+                <div class="Panel">
+                    <h3>Log Daily Recovery · <span lang="ar">تسجيل التعافي اليومي</span></h3>
+
+                    <form id="recoveryForm" novalidate>
+                        <div class="Field">
+                            <label for="entryDate"><span>Day / Date</span> <span lang="ar">اليوم / التاريخ</span></label>
+                            <input type="date" id="entryDate" name="entryDate" required>
+                        </div>
+
+                        <div class="Field">
+                            <label for="symptomInput"><span>Current Symptoms</span> <span lang="ar">الأعراض الحالية</span></label>
+                            <input type="text" id="symptomInput" name="symptoms" list="commonSymptoms"
+                                   placeholder="e.g., Mild headache, fatigue" required>
+                            <datalist id="commonSymptoms">
+                                <option value="Mild headache">
+                                <option value="Fatigue and weakness">
+                                <option value="Fever subsided">
+                                <option value="Sore throat">
+                                <option value="Muscle soreness">
+                                <option value="Feeling fully recovered">
+                            </datalist>
+                        </div>
+
+                        <div class="Grid">
+                            <div class="Field">
+                                <label for="painLevel">
+                                    <span>Pain Level <span lang="ar">مستوى الألم</span></span>
+                                    <output id="painOutput">3</output>
+                                </label>
+                                <input type="range" id="painLevel" name="painLevel" min="1" max="10" step="1" value="3">
+                            </div>
+
+                            <div class="Field">
+                                <label for="wellnessRange">
+                                    <span>Wellness % <span lang="ar">نسبة التحسن</span></span>
+                                    <output id="wellnessOutput">65</output>
+                                </label>
+                                <input type="range" id="wellnessRange" name="wellnessRange" min="0" max="100" step="5" value="65">
+                            </div>
+                        </div>
+
+                        <div class="Field">
+                            <label for="recoveryNotes"><span>Daily Notes</span> <span lang="ar">ملاحظات إضافية</span></label>
+                            <textarea id="recoveryNotes" name="recoveryNotes" rows="3"
+                                      placeholder="Write any medication taken or notes for your supervisor..."></textarea>
+                        </div>
+
+                        <div class="Buttons">
+                            <button type="submit">+ Add Recovery Entry · <span lang="ar">إضافة سجل التعافي</span></button>
+                            <button type="reset" class="Secondary">Clear Form</button>
+                        </div>
+
+                        <p class="feedback" id="formMessage" role="status" aria-live="polite"></p>
+                    </form>
+                </div>
+            </div>
+
+            <!-- History table (JS fills the rows) -->
+            <div class="Panel">
+                <h3>Recovery History &amp; Symptom Log · <span lang="ar">سجل تاريخ التعافي والأعراض</span></h3>
+
+                <div class="TableWrap">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Date</th>
+                                <th>Recorded Symptoms</th>
+                                <th>Pain Level</th>
+                                <th>Wellness %</th>
+                            </tr>
+                        </thead>
+                        <tbody id="historyBody"></tbody>
+                    </table>
+                </div>
+            </div>
+        </main>
+
+        <footer>
+            <p>&copy; 2026 Aid - Instant Support (<span lang="ar">عون للمساعدة الفورية</span>). All Rights Reserved.</p>
+        </footer>
+
+        <script src="recovery.js"></script>
+    </body>
+</html>
