@@ -30,12 +30,12 @@
                 ادخل معلوماتك الصحية وتاريخك الطبي
             </p>
 
-            <form>
+            <form id="Health-Profile-Form" novalidate>
                 <h3>Personal &amp; Medical Information</h3>
                 <div class="Grid">
                     <div class="Field">
                         <label for="Full-name">Full Name - الاسم كامل</label>
-                        <input type="text" id="Full-name" name="fullName" placeholder="Enter Full Name">
+                        <input type="text" id="Full-name" name="fullName" placeholder="Enter Full Name" required>
                     </div>
 
                     <div class="Field">
@@ -108,8 +108,11 @@
                     </div>
                 </div>
 
-                <button type="button">Save Profile - حفظ الملف</button>
+                <p id="Profile-Message" aria-live="polite"></p>
+                <button type="submit">Save Profile - حفظ الملف</button>
             </form>
         </main>
+
+        <script src="profile.js"></script>
     </body>
 </html>
