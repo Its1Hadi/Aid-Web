@@ -34,32 +34,44 @@
                 <h3>Personal &amp; Medical Information</h3>
                 <div class="Grid">
                     <div class="Field">
-                        <label for="Full-name">Full Name - الاسم كامل</label>
+                        <label for="Full-name">
+                            Full Name
+                            <span lang=ar>الاسم كامل</span>
+                        </label>
                         <input type="text" id="Full-name" name="fullName" placeholder="Enter Full Name" required>
                     </div>
 
                     <div class="Field">
-                        <label for="Contact-name">Emergency Name - اسم جهة الاتصال للطوارئ</label>
-                        <input type="text" id="Contact-name" name="contactName" placeholder="Enter Contact Name">
+                        <label for="Contact-name">
+                            Emergency Name
+                            <span lang="ar">اسم جهة الاتصال للطوارئ</span>
+                        </label>
+                        <input type="text" id="Contact-name" name="contactName" placeholder="Enter Contact Name" required>
                     </div>
                 </div>
 
                 <div class="Grid">
                     <div class="Field">
-                        <label for="Phone">Phone Number - رقم الهاتف</label>
-                        <input type="tel" id="Phone" name="phone" placeholder="Enter Phone Number">
+                        <label for="Phone">
+                            Phone Number
+                            <span lang="ar">رقم الهاتف</span>
+                        </label>
+                        <input type="tel" id="Phone" name="phone" placeholder="05X XXX XXXX" required>
                     </div>
 
                     <div class="Field">
-                        <label for="Contact-Phone">Emergency Contact Phone - رقم هاتف جهة الاتصال</label>
-                        <input type="tel" id="Contact-Phone" name="contactPhone" placeholder="Enter Contact Number">
+                        <label for="Contact-Phone">
+                            Emergency Contact Phone
+                            <span lang="ar">رقم هاتف جهة الاتصال</span>
+                        </label>
+                        <input type="tel" id="Contact-Phone" name="contactPhone" placeholder="05X XXX XXXX" required>
                     </div>
                 </div>
 
                 <div class="Grid">
                     <div class="Field">
-                        <label for="Blood-Type">Blood Type - فصيلة الدم</label>
-                        <select id="Blood-Type" name="bloodType">
+                        <label for="Blood-Type">Blood Type <span lang="ar">فصيلة الدم</span></label>
+                        <select id="Blood-Type" name="bloodType" required>
                             <option value="">Select if known</option>
                             <option value="a-positive">A+</option>
                             <option value="a-negative">A-</option>
@@ -75,43 +87,39 @@
 
                     <div class="Field">
                         <label for="Conditions">
-                            Chronic Conditions - الأمراض المزمنة
+                            Chronic Conditions 
+                            <span lang="ar">الأمراض المزمنة</span>
                         </label>
-                        <textarea
-                            id="Conditions" 
-                            name="conditions" 
-                            rows="4" 
-                            placeholder="List relevant conditions, if any">
-                        </textarea>
+                        <textarea id="Conditions" name="conditions" rows="4" placeholder="List relevant conditions, if any"></textarea>
                     </div>
                 </div>
 
                 <div class="Grid">
                     <div class="Field">
-                        <label for="Allergies">Known Allergies - الحساسية المعروفة</label>
-                        <textarea
-                            id="Allergies"
-                            name="allergies"
-                            rows="4"
-                            placeholder="List allergies, or write “None known”">
-                        </textarea>
+                        <label for="Allergies">
+                            Known Allergies
+                            <span lang="ar">الحساسية المعروفة</span>
+                        </label>
+                        <textarea id="Allergies" name="allergies" rows="4" placeholder="List allergies, or write “None known”"></textarea>
                     </div>
 
                     <div class="Field">
-                        <label for="Medications">Current Medications - الأدوية الحالية</label>
-                        <textarea
-                            id="Medications"
-                            name="medications"
-                            rows="4"
-                            placeholder="List current medications">
-                        </textarea>
+                        <label for="Medications">
+                            Current Medications 
+                            <span lang="ar"> الأدوية الحالية</span>
+                        </label>
+                        <textarea id="Medications" name="medications" rows="4" placeholder="List current medications"></textarea>
                     </div>
                 </div>
 
                 <p id="Profile-Message" aria-live="polite"></p>
-                <button type="submit">Save Profile - حفظ الملف</button>
+                <button type="submit">Save Profile · حفظ الملف</button>
             </form>
         </main>
+
+        <footer>
+            <p>&copy; 2026 Aid - Instant Support</p>
+        </footer>
 
         <script src="profile.js"></script>
     </body>
