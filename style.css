@@ -681,3 +681,127 @@ form .Request {
 }
 
 /*==================================================*/
+/*Recovery Tracker*/
+.Recovery {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    align-items: start;
+    margin-bottom: 24px;
+}
+
+.Recovery .Panel {
+    margin: 0;
+}
+
+.Progress {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+}
+
+.Progress p {
+    margin: 0 0 8px;
+}
+
+.Ring {
+    --value: 65;
+    position: relative;
+    display: grid;
+    place-items: center;
+    flex-shrink: 0;
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    background: conic-gradient(#1fb855 calc(var(--value) * 1%), #dde3e6 0);
+}
+
+.Ring::before {
+    content: "";
+    position: absolute;
+    inset: 14px;
+    border-radius: 50%;
+    background-color: white;
+}
+
+.Ring span {
+    position: relative;
+    text-align: center;
+    line-height: 1.2;
+}
+
+.Ring strong {
+    display: block;
+    font-size: 30px;
+    color: #1fb855;
+}
+
+.Panel form {
+    max-width: none;
+    margin: 0;
+    padding: 0;
+    background-color: transparent;
+    border-radius: 0;
+    box-shadow: none;
+}
+
+.Panel form .Field {
+    margin-bottom: 12px;
+}
+
+.Field input[type="range"] {
+    height: auto;
+    padding: 0;
+    border: 0;
+    accent-color: #16868b;
+}
+
+.Field output {
+    font-weight: normal;
+}
+
+.Buttons {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 4px;
+}
+
+.Panel form button.Secondary {
+    background-color: white;
+    color: #16868b;
+    border: 2px solid #16868b;
+}
+
+.Panel form button.Secondary:hover {
+    background-color: #eaf3f5;
+}
+
+.TableWrap {
+    overflow-x: auto;
+}
+
+.Panel table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.Panel th,
+.Panel td {
+    padding: 10px 12px;
+    text-align: left;
+    border-bottom: 1px solid #dce4e7;
+}
+
+.Panel th {
+    color: #087f8c;
+}
+
+.Panel {
+    margin-bottom: 20px;
+    padding: 20px;
+    border: 1px solid #dce4e7;
+    border-radius: 16px;
+    background: white;
+    box-shadow: 0 5px 14px rgba(24, 50, 71, 0.12);
+}
+/*==================================================*/
