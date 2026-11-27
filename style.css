@@ -21,6 +21,62 @@ body {
     min-height: 100vh;
 }
 
+/*Logo*/
+.brand {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    column-gap: 12px;
+    align-items: center;
+}
+
+.brand .Logo {
+    grid-row: 1 / 3;
+}
+
+.brand h1 {
+    font-size: 40px;
+    line-height: 1.1;
+}
+
+.brand h1 span {
+    font-size: 17px;
+}
+
+.brand p {
+    font-size: 17px;
+    line-height: 1.3;
+}
+
+.Logo {
+    position: relative;
+    flex-shrink: 0;
+    width: 64px;
+    height: 64px;
+    border: 3px solid #21858a;
+    border-radius: 50%;
+}
+
+.Logo::before,
+.Logo::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    background-color: #1a8587;
+    border-radius: 3px;
+    transform: translate(-50%, -50%);
+}
+
+.Logo::before {
+    width: 34px;
+    height: 10px;
+}
+
+.Logo::after {
+    width: 10px;
+    height: 34px;
+}
+
 /* Header styles */
 header {
     display: flex;
@@ -201,7 +257,7 @@ footer {
 }
 
 /*==================================================*/
-/* Health Profile form */
+/* Health Profile Page */
 main > h2 {
     margin-top: 12px;
     font-size: 30px;
@@ -299,7 +355,7 @@ form button:hover {
 }
 
 /*==================================================*/
-/*Request Help*/
+/*Request Help Page*/
 .Chips {
     display: flex;
     flex-wrap: wrap;
@@ -353,6 +409,275 @@ form .Request {
     box-shadow: none;
     border: 0;
     padding: 0;
+}
+
+/*==================================================*/
+/*Emergency Info Page*/
+.Emergency {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 30px 24px 64px;
+    text-align: left;
+}
+
+.Emergency .Info-A {
+    display: block;
+    max-width: 980px;
+    margin: 24px auto 48px;
+    padding: 44px;
+    border-radius: 24px;
+    background: linear-gradient(120deg, #ddf6f8, #bfe1e3);
+}
+
+.Emergency .Info-A .Info-B {
+    display: block;
+    margin: 0 0 16px;
+    color: #116e73;
+    font-size: 13px;
+    font-weight: bold;
+    letter-spacing: 0.08em;
+}
+
+.Emergency .Info-A h2 {
+    max-width: 820px;
+    margin: 0 0 18px;
+    color: #183247;
+    font-size: 48px;
+    line-height: 1.1;
+}
+
+.Emergency .Info-A h2 span {
+    color: #116e73;
+}
+
+.Emergency .Info-A .Info-C {
+    display: block;
+    max-width: 620px;
+    margin: 0 0 24px;
+    color: #526875;
+    font-size: 18px;
+}
+
+.Emergency .Info-A .Info-Button {
+    display: inline-block;
+}
+
+.Info-A {
+    margin: 20px 0 48px;
+    padding: 48px;
+    border-radius: 24px;
+    background: linear-gradient(120deg, #e4f1f2, #f7fbfb);
+}
+
+.Info-A h2 {
+    margin: 0 0 16px;
+    color: #183247;
+    font-size: clamp(36px, 5vw, 58px);
+    line-height: 1.1;
+}
+
+.Info-A h2 span {
+    color: #116e73;
+}
+
+.Info-B {
+    margin: 0 0 12px;
+    color: #116e73;
+    font-size: 13px;
+    font-weight: bold;
+    letter-spacing: 0.08em;
+}
+
+.Info-C {
+    max-width: 600px;
+    margin-bottom: 24px;
+    color: #526875;
+    font-size: 18px;
+}
+
+.Info-Button {
+    display: inline-block;
+    padding: 12px 20px;
+    border-radius: 9px;
+    background-color: #16868b;
+    color: white;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.Info-Button:hover {
+    background-color: #116e73;
+}
+
+.Info-Section,
+.Section {
+    margin-top: 48px;
+}
+
+.Info-Section h2,
+.Section h2 {
+    margin: 0 0 12px;
+    color: #183247;
+    font-size: 30px;
+}
+
+.Info-Intro {
+    color: #607783;
+}
+
+.Info-Steps,
+.Status-Grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 16px;
+    margin-top: 22px;
+}
+
+.Card {
+    padding: 24px;
+    border: 1px solid #dce8ea;
+    border-radius: 16px;
+    background-color: white;
+    box-shadow: 0 6px 18px rgba(24, 50, 71, 0.08);
+}
+
+.Number {
+    width: 36px;
+    height: 36px;
+    display: grid;
+    place-items: center;
+    margin-bottom: 18px;
+    border-radius: 50%;
+    background-color: #dff0f0;
+    color: #116e73;
+    font-weight: bold;
+}
+
+.Card h3 {
+    margin: 0 0 10px;
+    color: #183247;
+    font-size: 20px;
+}
+
+.Card p {
+    margin: 0;
+    color: #526875;
+    line-height: 1.6;
+}
+
+.Statuses {
+    padding: 28px;
+    border-radius: 20px;
+    background-color: #f2f8f9;
+}
+
+.Info-Status {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    padding: 18px;
+    border: 1px solid #dce8ea;
+    border-radius: 13px;
+    background-color: white;
+}
+
+.Info-Status h3 {
+    margin: 0 0 4px;
+}
+
+.Info-Status p {
+    margin: 0;
+    color: #607783;
+}
+
+.Dot {
+    width: 13px;
+    height: 13px;
+    flex: none;
+    border-radius: 50%;
+}
+
+.Info-Critical .Dot {
+    background-color: #c82333;
+}
+
+.Info-Urgent .Dot {
+    background-color: #e6ad00;
+}
+
+.Info-Stable .Dot {
+    background-color: #198547;
+}
+
+.Small-Note {
+    margin-top: 18px;
+    color: #526875;
+    font-size: 14px;
+}
+
+.Section.FAQ {
+    display: block;
+    max-width: 900px;
+    margin: 64px auto;
+    padding: 32px;
+    border: 1px solid #dce8ea;
+    border-radius: 20px;
+    background: #f5f9fa;
+    text-align: left;
+}
+
+.FAQ .Info-B {
+    margin: 0 0 8px;
+    color: #116e73;
+    font-size: 13px;
+    font-weight: bold;
+    letter-spacing: 0.1em;
+}
+
+.FAQ h2 {
+    margin: 0 0 22px;
+    color: #183247;
+    font-size: 32px;
+}
+
+.FAQ details {
+    margin: 10px 0;
+    padding: 18px 20px;
+    border: 1px solid #dce8ea;
+    border-radius: 12px;
+    background: white;
+    transition: box-shadow 0.2s ease;
+}
+
+.FAQ summary {
+    color: #183247;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.FAQ details p {
+    margin: 12px 0 0;
+    color: #526875;
+}
+
+.Closing {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 24px;
+    margin-top: 48px;
+    padding: 28px;
+    border-radius: 18px;
+    background-color: #e4f1f2;
+}
+
+.Closing h2 {
+    margin-bottom: 8px;
+}
+
+.Closing p {
+    margin-bottom: 0;
+    color: #526875;
 }
 
 /*==================================================*/
